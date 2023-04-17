@@ -1,0 +1,64 @@
+.account {
+    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    overflow-y: auto;
+    background: #f2f4f7;
+  }
+  
+  .account__wrapper {
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .account__card {
+    background-color: #ffffff;
+    padding: 50px 60px;
+    max-width: 520px;
+    width: 100%;
+  }
+  
+  .account__profile {
+    text-align: center;
+  }
+  
+  .account__btn {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .account__forgot-password {
+    position: absolute;
+    font-size: 11px;
+    line-height: 15px;
+    bottom: -18px;
+    right: 0;
+  
+    a {
+      color: $color-blue;
+  
+      &:hover {
+        color: $color-blue-hover;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .form__form-group--forgot {
+    margin-bottom: 40px;
+  }
+
+  .account__head {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    border-left: 4px solid $color-blue;
+  }
+  
+  @media screen and (max-width: 520px) {
+  
+    .account__card {
+      padding: 35px 30px;
+    }
+  }
+  

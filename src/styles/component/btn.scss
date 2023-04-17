@@ -1,0 +1,102 @@
+.btn {
+  border-radius: 5px;
+  padding: 10px 25px;
+  transition: all 0.4s;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &:before {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    background-color: $color-accent;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    content: "";
+    top: 0;
+    left: 0;
+  }
+
+  p {
+    display: flex;
+    transition: all 0.3s;
+    font-weight: 500;
+    color: #444444;
+  }
+
+  &:hover, &:focus, &:active, &:active:focus {
+    outline: none;
+    box-shadow: none !important;
+
+    &:before {
+      height: 500%;
+      width: 225%;
+    }
+  }
+
+  &:focus, &:active, &:active:focus {
+
+    &:before {
+      transition: all 0s;
+    }
+  }
+
+  &.btn-sm {
+    padding: 5px 25px;
+    font-size: 14px;
+  }
+
+  &.btn-lg {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  &.btn-secondary {
+    background-color: #e7e2e2;
+    border-color: #e7e2e2;
+    color: #646777;
+
+    &:before {
+      background-color: darken(#e7e2e2, 10%);
+    }
+
+    &:hover, &:focus, &:active, &:active:focus {
+      border-color: darken(#e7e2e2, 10%);
+      color: #646777;
+    }
+
+    &:not([disabled]):not(.disabled):active, &:not([disabled]):not(.disabled).active {
+      background-color: #dddddd;
+      border-color: #dddddd;
+    }
+  }
+
+  &.btn-primary {
+    background-color: $color-blue;
+    border-color: $color-blue;
+
+    &:before {
+      background-color: $color-blue-hover;
+    }
+
+    &:hover, &:focus, &:active, &:active:focus {
+      border-color: $color-blue-hover;
+    }
+
+    &.disabled {
+      background-color: #f2f4f7;
+      border-color: #f2f4f7;
+      color: #dddddd;
+      pointer-events: none;
+
+      p {
+        color: #dddddd;
+      }
+    }
+  }
+  
+}

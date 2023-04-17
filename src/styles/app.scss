@@ -1,0 +1,15 @@
+//colors
+@import './settings/colors.scss'; 
+
+//base
+@import './base/scaffolding';
+@import './base/typography';  
+
+//components
+@import './component/account.scss';
+@import 'component/btn';
+@import './component/card';
+@import './component/sidebar';
+@import './component/topbar';
+@import './component/layout';
+@import './component/form';

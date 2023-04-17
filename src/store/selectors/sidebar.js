@@ -1,0 +1,1 @@
+export const getSidebarProps = ({ sidebar }) => sidebar;

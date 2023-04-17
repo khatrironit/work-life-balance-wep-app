@@ -1,0 +1,93 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  input, textarea {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 12px;
+    height: 32px;
+    transition: border 0.3s;
+    background: transparent;
+
+    &::-webkit-input-placeholder {
+      color: $color-additional;
+    }
+    &::-moz-placeholder {
+      color: $color-additional;
+    }
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+      color: $color-additional;
+    }
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+      color: $color-additional;
+    }
+    border: 1px solid $color-fields-border;
+    color: $color-text;
+
+    &[disabled] {
+      background: $color-background-body;
+
+      &:focus, &:active {
+        border-color: $color-border;
+      }
+    }
+
+    &:focus, &:active {
+      outline: none;
+      border-color: $color-accent;
+    }
+  }
+
+  textarea {
+    min-height: 85px;
+  }
+}
+
+.form__form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.form__form-group-field {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.form__form-group-label {
+  margin-bottom: 4px;
+  display: inline-block;
+  color: $color-text;
+
+  span {
+    color: #dddddd;
+  }
+}
+
+.form__form-group-error {
+  font-size: 10px;
+  line-height: 13px;
+  color: #ad4444;
+  margin-bottom: -5px;
+  display: block;
+  margin-top: 5px;
+}
+
+.form__form-group-button {
+  padding: 6px;
+  height: 32px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid $color-fields-border;    
+  background: $color-fields-border;
+
+  &.active {
+    background: $color-accent;
+    border: 1px solid $color-accent;
+  }
+}
+
